@@ -1,0 +1,23 @@
+dsbaars_demo:
+    resource: "@DsbaarsDemoBundle/Controller/"
+    type:     annotation
+    prefix:   /
+    options:
+        expose: true
+
+dsbaars_demo_api:
+    resource: "@DsbaarsDemoBundle/ApiController/"
+    type:     annotation
+    prefix:   /api
+    options:
+        expose: true
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+# Redirect everything else to index, so ui-router can take over
+root:
+    path: /{rest}
+    defaults:
+        _controller: DsbaarsDemoBundle:Default:index
+        path: /

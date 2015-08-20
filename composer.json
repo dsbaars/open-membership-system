@@ -1,0 +1,70 @@
+{
+    "name": "dsbaars/open-membership-system",
+    "license": "MIT",
+    "type": "project",
+    "description": "Open Membership System",
+    "version": "1.0.0",
+    "autoload": {
+        "psr-0": { "": "src/", "SymfonyStandard": "app/" }
+    },
+    "require": {
+        "php": ">=5.3.3",
+        "symfony/symfony": "2.7.3",
+        "doctrine/orm": ">=2.5.0",
+        "doctrine/doctrine-bundle": "~1.5",
+        "twig/extensions": "~1.2",
+        "symfony/swiftmailer-bundle": "~2.3",
+        "symfony/monolog-bundle": "~2.7",
+        "sensio/distribution-bundle": "~3.0",
+        "sensio/framework-extra-bundle": "~3.0",
+        "sensio/generator-bundle": "~2.5",
+        "incenteev/composer-parameter-handler": "~2.1",
+        "friendsofsymfony/jsrouting-bundle": "1.5.*",
+        "friendsofsymfony/rest-bundle": "1.7.*",
+        "nelmio/api-doc-bundle": "2.9.*",
+        "jms/di-extra-bundle": "1.5.*",
+        "jms/serializer-bundle": "1.0.*",
+        "nelmio/cors-bundle": "1.4.*"
+    },
+    "require-dev": {
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "SymfonyStandard\\Composer::hookRootPackageInstall"
+        ],
+        "post-install-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Dsbaars\\Bundle\\NodejsToolBundle\\Composer\\ScriptHandler::checkToolAvailability",
+            "Dsbaars\\Bundle\\NodejsToolBundle\\Composer\\ScriptHandler::installNpmAssets",
+            "Dsbaars\\Bundle\\NodejsToolBundle\\Composer\\ScriptHandler::installBowerAssets"
+        ],
+        "post-update-cmd": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles",
+            "Dsbaars\\Bundle\\NodejsToolBundle\\Composer\\ScriptHandler::checkToolAvailability",
+            "Dsbaars\\Bundle\\NodejsToolBundle\\Composer\\ScriptHandler::installNpmAssets",
+            "Dsbaars\\Bundle\\NodejsToolBundle\\Composer\\ScriptHandler::installBowerAssets"
+        ]
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "web",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        },
+        "branch-alias": {
+            "dev-master": "2.7-dev"
+        }
+    }
+}

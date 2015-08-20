@@ -1,0 +1,30 @@
+{
+  "name": "open-membership-system",
+  "version": "1.0.0",
+  "authors": [
+    "Djuri Baars <dsbaars@gmail.com>"
+  ],
+  "description": "Open Membership System",
+  "keywords": [
+    "membership",
+    "administration",
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.4",
+    "angular-resource": "1.4.4",
+    "angular-ui-router": "0.2.15",
+    "angular-bootstrap": "0.13.3",
+    "bootstrap": "3.3.5",
+    "font-awesome": "4.4.0",
+    "jquery": "2.1.4"
+  }
+}

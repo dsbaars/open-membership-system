@@ -1,0 +1,11 @@
+<div class="container-fluid">
+    <div clas="row">
+        <ul ng-controller="MainCtrl as ctrl">
+            <li>[[ helloSquare ]]</li>
+            <li ng-bind=helloBind></li>
+            <li>{{ hello }}</li>
+        </ul>
+        <p>Twig says the Request URI is {{ app.request.requestUri }}</p>
+        <p>NelmioApiDocBundle has some API docs for you at <a href="{{ path('nelmio_api_doc_index') }}" target="_self">{{ path('nelmio_api_doc_index') }}</a></p>
+    </div>
+</div>
