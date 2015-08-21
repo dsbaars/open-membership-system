@@ -1,0 +1,42 @@
+<md-content style="background: #eee" layout-fill>
+    <md-grid-list md-cols="3" md-row-height="400px" md-gutter="1em">
+        <md-grid-tile>
+            <md-whiteframe class="md-whiteframe-z3" style="width: 75%">
+                <md-subheader>Information</md-subheader>
+                <md-content layout-padding>
+                    Welcome at the new registration environment of Sports and Culture of the University of Something
+                    <br> Here you can buy the UnionCard or CampusCard.
+                </md-content>
+            </md-whiteframe>
+        </md-grid-tile>
+        <md-grid-tile>
+            <md-whiteframe class="md-whiteframe-z3" style="width:75%">
+                <md-subheader class="md-primary">Your subscriptions</md-subheader>
+                <md-list layout-padding>
+                    <md-list-item class="md-2-line" ng-repeat="s in vm.subscriptions">
+                        <div class="md-list-item-text">
+                            <h3>[[ s.name ]]</h3>
+                            <p>[[ s.validFrom ]] t/m [[ s.validUntil ]]</p>
+                        </div>
+                        <md-divider ng-show="!$last"></md-divider>
+                    </md-list-item>
+                </md-list>
+            </md-whiteframe>
+        </md-grid-tile>
+        <md-grid-tile>
+            <md-whiteframe class="md-whiteframe-z3" style="width:75%">
+                <md-subheader class="md-accent">Your reservations</md-subheader>
+                <md-list layout-padding>
+                    <md-list-item class="md-2-line"  ng-repeat="r in vm.reservations">
+                        <div class="md-list-item-text">
+                            <h3>[[ r.title ]]</h3>
+                            <p>[[ r.start ]]</p>
+                        </div>
+                        <md-divider ng-show="!$last"></md-divider>
+                    </md-list-item>
+
+                </md-list>
+            </md-whiteframe>
+        </md-grid-tile>
+    </md-grid-list>
+</md-content>

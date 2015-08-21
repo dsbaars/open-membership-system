@@ -4,7 +4,7 @@ module.exports =
         bare: true
     default:
         expand: true
-        flatten: true
+        flatten: false
         src: [
             "app/Resources/coffee/**/*.coffee"
             "src/**/*.coffee"

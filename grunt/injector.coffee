@@ -1,7 +1,7 @@
 module.exports =
       options:
           ignorePath: [ 'web/' ]
-          min: true
+          min: false
       app:
           files:
               'app/Resources/views/base.html.twig': [

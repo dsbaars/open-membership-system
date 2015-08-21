@@ -1,23 +1,33 @@
-app = angular.module("dsbaars", [
-        'ui.bootstrap'
-        'ui.router'
-    ], (
-    $interpolateProvider,
-    $stateProvider,
-    $urlRouterProvider,
-    $locationProvider,
-    $httpProvider
-    ) ->
-    $interpolateProvider.startSymbol('[[')
-    $interpolateProvider.endSymbol(']]')
+(->
+    configure = ($mdIconProvider) ->
+        $mdIconProvider.fontSet('fa', 'fontawesome')
+        return
 
-    $urlRouterProvider
-        .otherwise('/')
+    angular
+        .module('oms.user', [])
 
-    $locationProvider.html5Mode(true)
+    angular
+        .module('oms.config', [])
+
+    angular
+        .module('oms.directives', [])
+
+    angular
+        .module('oms.routes', [])
+
+    angular
+        .module('oms', [
+            'ngSanitize'
+            'ngAria'
+            'ngMaterial'
+            'ui.router'
+            'ui.calendar'
+            'oms.routes'
+            'oms.shop'
+            'oms.user'
+        ]).constant('organisation', {
+
+        }).config(configure)
 
     return
-)
-
-app.controller("MainCtrl", MainCtrl)
-app.controller("DemoCtrl", DemoCtrl)
+)()

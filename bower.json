@@ -7,7 +7,7 @@
   "description": "Open Membership System",
   "keywords": [
     "membership",
-    "administration",
+    "administration"
   ],
   "license": "MIT",
   "private": true,
@@ -20,11 +20,17 @@
   ],
   "dependencies": {
     "angular": "1.4.4",
-    "angular-resource": "1.4.4",
+    "angular-resource": "~1.4.4",
     "angular-ui-router": "0.2.15",
     "angular-bootstrap": "0.13.3",
     "bootstrap": "3.3.5",
     "font-awesome": "4.4.0",
-    "jquery": "2.1.4"
+    "jquery": "2.1.4",
+    "angular-material": "master",
+    "angular-sanitize": "~1.4.4",
+    "angular-ui-calendar": "~1.0.1"
+  },
+  "resolutions": {
+    "angular": "1.4.4"
   }
 }

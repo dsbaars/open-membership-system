@@ -1,0 +1,18 @@
+<md-content layout-padding>
+    <md-grid-list cols="5" md-cols="3" sm-cols="2" md-gutter="1em" md-row-height="4:2">
+        <md-grid-tile ng-class="vm.colors[$index % 5]" layout="column" ng-repeat="i in vm.items">
+            <md-grid-tile-header>
+                <h3 class="md-headline">[[ i.name ]]</h3>
+            </md-grid-tile-header>
+            <p layout-padding>[[ i.description ]]</p>
+            <div>
+                <md-button class="md-fab md-mini" aria-label="Add to shopping cart">
+                    <md-icon> add_shopping_cart </md-icon>
+                </md-button>
+            </div>
+            <md-grid-tile-footer layout-padding>
+                <div>[[ i.price| currency:"€ " ]]</div>
+            </md-grid-tile-footer>
+        </md-grid-tile>
+    </md-grid-list>
+</md-content>

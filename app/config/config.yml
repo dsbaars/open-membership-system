@@ -2,7 +2,9 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: bundles/doctrine.yml }
+    - { resource: bundles/doctrine_phpcr.yml }
     - { resource: bundles/fos_rest.yml }
+    - { resource: bundles/fos_user.yml }
     - { resource: bundles/jms_serializer.yml }
     - { resource: bundles/nelmio_api_doc.yml }
     - { resource: bundles/nelmio_cors.yml }

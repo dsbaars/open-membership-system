@@ -1,0 +1,10 @@
+doctrine_phpcr:
+    session:
+        backend:
+            type: doctrinedbal
+            logging: true
+            # enable profiling in the debug toolbar.
+            profiling: true
+        workspace: default
+        username: admin
+        password: admin

@@ -1,0 +1,15 @@
+ets_payment_ogone:
+    pspid:     dsbaars
+    shain:     Your SHA-1 IN passphrase
+    shaout:    Your SHA-1 OUT passphrase
+    debug:     true
+    utf8:      true
+    api:
+        user: Your api user
+        password: Your api password
+    redirection:
+        accept_url:
+        decline_url:
+        exception_url:
+        cancel_url:
+        back_url:

@@ -1,16 +1,20 @@
-dsbaars_demo:
-    resource: "@DsbaarsDemoBundle/Controller/"
+oms_shop:
+    resource: "@OmsShopBundle/Controller/"
     type:     annotation
     prefix:   /
-    options:
-        expose: true
 
-dsbaars_demo_api:
-    resource: "@DsbaarsDemoBundle/ApiController/"
+oms_base:
+    resource: "@OmsBaseBundle/Controller/"
     type:     annotation
-    prefix:   /api
-    options:
-        expose: true
+    prefix:   /
+
+oms_user:
+    resource: "@OmsUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

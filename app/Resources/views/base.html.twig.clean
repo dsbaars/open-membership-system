@@ -1,39 +1,19 @@
 <!DOCTYPE html>
-<html xmlns:ng="http://angularjs.org" ng-app="dsbaars">
+<html xmlns:ng="http://angularjs.org" ng-app="oms">
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Symfony+Angular Demo{% endblock %}</title>
+        <title>{% block title %}Open Membership System{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- injector:css -->
         <!-- endinjector -->
     </head>
     <body>
-        <div class="navbar navbar-default navbar-static-top" ng-controller="NavbarCtrl">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button class="navbar-toggle" type="button" ng-click="isCollapsed = !isCollapsed">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href="/" class="navbar-brand">sf+ng<span class="fa fa-compass"></span></a>
-                </div>
-                <div collapse="isCollapsed" class="navbar-collapse collapse" id="navbar-main">
-                    <ul class="nav navbar-nav">
-                        <li ng-repeat="item in menu" ng-class="{active: isActive(item.link)}">
-                            <a ng-href="[[item.link]]">[[ item.title ]]</a>
-                        </li>
-                        <li ng-show="isAdmin()" ng-class="{active: isActive('/admin')}"><a href="/admin">Admin</a></li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div ui-view="">
+        <section ng-include="'/static/layout/header.html'"></section>
+        <section ui-view="">
         {% block body %}{% endblock %}
-        </div>
+        </section>
         <!-- injector:js -->
         <!-- endinjector -->
         {% block javascripts %}

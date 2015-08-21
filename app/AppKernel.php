@@ -15,6 +15,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             #new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
+            new Doctrine\Bundle\PHPCRBundle\DoctrinePHPCRBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
             # This is all useful to create a REST API
@@ -26,9 +27,13 @@ class AppKernel extends Kernel
             # REST stuff ends here
 
             new Nelmio\CorsBundle\NelmioCorsBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new Dsbaars\Bundle\DemoBundle\DsbaarsDemoBundle(),
             new Dsbaars\Bundle\NodejsToolBundle\DsbaarsNodejsToolBundle(),
+            new Oms\Bundle\UserBundle\OmsUserBundle(),
+            new Oms\Bundle\BaseBundle\OmsBaseBundle(),
+            new Oms\Bundle\ShopBundle\OmsShopBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
